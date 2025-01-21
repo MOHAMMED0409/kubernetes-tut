@@ -1,0 +1,3 @@
+Apply Deployment Configuration Command:
+    
+    kubectl apply -f webapp-deployment.yaml

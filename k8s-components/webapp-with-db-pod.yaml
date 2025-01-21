@@ -1,0 +1,16 @@
+# webapp-with-db-pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-with-db
+  labels:
+    app: my-webapp
+spec:
+  containers:
+  - name: webapp
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  - name: database
+    image: mongo:latest
