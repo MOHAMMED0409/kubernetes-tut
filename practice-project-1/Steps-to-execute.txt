@@ -1,0 +1,4 @@
+kubectl apply -f secrets.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f mongo-configmap.yaml
+kubectl apply -f mongo-express.yaml
