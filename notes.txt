@@ -1,0 +1,54 @@
+What is Kubernetes Deployment?
+    a. Kubernetes Deployment is a resource object in Kubernetes that 
+       provides a way to declaratively manage a set of identical pods.
+
+    b. managing the deployment and scaling of a set of pod replicas.
+
+    c. making it easier to manage, update, and scale your application 
+       without worrying about the underlying infrastructure.
+
+    d. features, such as rolling updates and rollbacks, scaling, and health checks.
+
+How do Deployments work?
+    a. specifying the desired state of your application, including the 
+       number of replicas and the container image to use.
+
+    b. creates a set of identical pod replicas based on the 
+       pod template specified in the Deployment.
+
+    c. Deployment controller monitors - ensuring that the desired number of replicas 
+                                        are running at all times. 
+                                
+    d. If you update the Deployment with a new version of the container image or other configuration changes, 
+       the controller will perform a rolling update, gradually replacing the existing replicas with the 
+       new ones to ensure minimal downtime.
+
+    e. If there are any issues with the new version of the application, you can perform a rollback to the 
+       previous version using the Deployment’s rollback feature.
+
+    f. adjust the number of replicas running based on changes in traffic or other factors.
+
+What are the Benefits of using Deployments?
+    a. Automatic management of replicas.
+
+    b. Rolling updates and rollbacks.
+
+    c. Scaling the application up or down based on the traffic.
+        i. Horizontal Scaling.
+        ii. Vertical Scaling.
+
+    d. Health checks and self-healing.
+
+    e. Declarative configuration.
+
+Deployment strategies
+    a. Rolling Update Deployment Strategy:
+        new version of the application is gradually rolled out to the cluster by updating one 
+        or a few Pods at a time,while keeping the rest of the Pods running the old version.
+
+    b. Recreate Deployment Strategy:
+        With the Recreate strategy, all the existing replicas of the previous version are terminated 
+        and replaced with new replicas of the new version.
+    
+    c. Blue/Green Deployment Strategy:
+        
