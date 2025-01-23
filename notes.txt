@@ -51,4 +51,26 @@ Deployment strategies
         and replaced with new replicas of the new version.
     
     c. Blue/Green Deployment Strategy:
+        Two identical environments (blue and green) are setup in cluster. blue will be running the 
+        current version of the application. Green will be running the new version of the application.
+
+        Once the new version is deployed in the green environment the traffic will be routed to the green
+        environment and the blue environment will be destroyed.
+
+    d. Canary Deployment Strategy:
+        It is used to test the new version in small subset the production environment. Majority of the 
+        traffic is routed to the older version based on the performance of the new version gradually all the 
+        traffic is routed to the new version.
+
+    e. A/B Testing Deployment Strategy:
+        This is similar to Canary Deployment Strategy but in this approach the traffic is split
+        into two equal half and routed to both the environment new version and old version.
+
+        This allow to compare the performance of both the version and use the efficient one in the
+        production.
+
+        To implement these deployment strategies, Kubernetes provides features such as labels, selectors, 
+        and services that can be used to control the routing of traffic between different versions 
+        of the application.
+
         
